@@ -6,14 +6,14 @@ This tool implements a SIRD model applied to COVID-19 spreading.
 
 ## The model
 
-The model simulates the amount in time of the following variables: number of susceptible people (*S*); the number of infected patients (*I*); the number of people that recovered from the disease (*R*); the number of deceased patients (*D*). The following set of coupled ordinary differential equations describes the rate of change of the four variables:
+The model simulates the variation over time of the following variables: the number of susceptible individuals (*S*); the number of infected individuals (*I*); the number of individuals who recovered from the disease (*R*); the number of deceased patients (*D*). The model consists in the following system of coupled ordinary differential equations:
 - ![alt text](https://latex.codecogs.com/gif.latex?%5Cdot%20S%20%3D%20-%5Cbeta%20%5Ccdot%20S%20%5Ccdot%20I "dS/dt = -beta*S*I")
 - ![alt text](https://latex.codecogs.com/gif.latex?%5Cdot%20I%20%3D%20%5Cbeta%20%5Ccdot%20S%20%5Ccdot%20I%20-%20%5Cgamma%20%5Ccdot%20I%20-%20%5Cdelta%20%5Ccdot%20I "dI/dt = beta*S*I - gamma*I - delta*I")
 - ![alt text](https://latex.codecogs.com/gif.latex?%5Cdot%20R%20%3D%20-%5Cgamma%20%5Ccdot%20I "dR/dt=delta*I")
 - ![alt text](https://latex.codecogs.com/gif.latex?%5Cdot%20D%20%3D%20-%5Cdelta%20%5Ccdot%20I "dD/dt=delta*I")
 
 The user must provide time-series of the number of infected, recovered and deceased patients. Then, four parameters are automatically calibrated against observed time-series:
-- *S*(0), i.e., the number of susceptible people in the population at *t*=0;
+- *S*(0), i.e., the number of susceptible individuals in the population at *t*=0;
 - the transmission rate ![alt text](https://latex.codecogs.com/gif.latex?%5Csmall%20%5Cbeta "beta");
 - the recovery rate ![alt text](https://latex.codecogs.com/gif.latex?%5Csmall%20%5Cgamma "gamma");
 - the fatality rate ![alt text](https://latex.codecogs.com/gif.latex?%5Csmall%20%5Cdelta "delta").
