@@ -13,20 +13,20 @@ The model simulates the amount in time of the following variables: number of sus
 - ![alt text](https://latex.codecogs.com/gif.latex?%5Cdot%20D%20%3D%20-%5Cdelta%20%5Ccdot%20I "dD/dt=delta*I")
 
 The user must provide time-series of the number of infected, recovered and passed away patients. Then, four parameters are automatically calibrated against observed time-series:
-- ![alt text](https://latex.codecogs.com/gif.latex?%5Csmall%20S%280%29 "S(0)"), i.e., the number of susceptible people in the population at *t=0*;
+- *S(0)*, i.e., the number of susceptible people in the population at *t=0*;
 - the transmission rate ![alt text](https://latex.codecogs.com/gif.latex?%5Csmall%20%5Cbeta "beta");
 - the recovery rate ![alt text](https://latex.codecogs.com/gif.latex?%5Csmall%20%5Cgamma "gamma");
 - the fatality rate ![alt text](https://latex.codecogs.com/gif.latex?%5Csmall%20%5Cdelta "delta").
 
-The rest of the initial state of the system (i.e., I(0), R(0), and D(0)) are automatically determined by the input time-series.
+The rest of the initial state of the system (i.e., *I(0)*, *R(0)*, and *D(0)*) are automatically determined by the input time-series.
 
-## Simulating lock-down events
+## Simulating lockdown events
 
 Our tool allows the simulation of lockdown events. An event is modeled as a pair (days, ![alt text](https://latex.codecogs.com/gif.latex?%5Csmall%20%5Calpha "alpha")) where
-- days is the number of days after the beginning of the time-series, in which the lock-down is applied;
-- ![alt text](https://latex.codecogs.com/gif.latex?%5Csmall%20%5Calpha "alpha") is a scaling factor for the beta parameter, simulating a slower transmission rate due to limited social interaction.
+- days is the number of days after the beginning of the time-series, in which the lockdown is applied;
+- ![alt text](https://latex.codecogs.com/gif.latex?%5Csmall%20%5Calpha "alpha") is a scaling factor for the ![alt text](https://latex.codecogs.com/gif.latex?%5Csmall%20%5Cbeta "beta") parameter, simulating a slower transmission rate due to limited social interaction.
 
-The user can provide a list of events, in order to simulate the effect of multiple or pulsed lock-downs.
+The user can provide a list of events, in order to simulate the effect of multiple or pulsed lockdowns.
 
 ## Technical details:
 - scipy's LSODA is used for ODE integration; 
