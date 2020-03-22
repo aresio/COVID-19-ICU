@@ -28,12 +28,12 @@ Our tool allows the simulation of lockdown events. An event is modeled as a pair
 
 The user can provide a list of events, in order to simulate the effect of multiple or pulsed lockdowns.
 
-## Technical details:
+## Technical details
 - scipy's LSODA is used for ODE integration; 
 - [FST-PSO](https://www.sciencedirect.com/science/article/abs/pii/S2210650216303534) is the Computational Intelligence algorithm used for parameters calibration;
 - the objective function used for the calibration is the cumulative RMSE error of the model with respect to the target time-series.
 
-## Further information:
+## Further information
 
 For information about the modeling approach, please contact Prof. Daniela Besozzi (daniela.besozzi@unimib.it).
 
