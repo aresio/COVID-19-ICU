@@ -13,7 +13,7 @@ The model simulates the amount in time of the following variables: number of sus
 - ![alt text](https://latex.codecogs.com/gif.latex?%5Cdot%20D%20%3D%20-%5Cdelta%20%5Ccdot%20I "dD/dt=delta*I")
 
 The user must provide time-series of the number of infected, recovered and passed away patients. Then, four parameters are automatically calibrated against observed time-series:
-- *S*(0), i.e., the number of susceptible people in the population at *t=0*;
+- *S*(0), i.e., the number of susceptible people in the population at *t*=0;
 - the transmission rate ![alt text](https://latex.codecogs.com/gif.latex?%5Csmall%20%5Cbeta "beta");
 - the recovery rate ![alt text](https://latex.codecogs.com/gif.latex?%5Csmall%20%5Cgamma "gamma");
 - the fatality rate ![alt text](https://latex.codecogs.com/gif.latex?%5Csmall%20%5Cdelta "delta").
