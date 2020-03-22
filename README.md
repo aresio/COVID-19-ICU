@@ -6,7 +6,7 @@ This tool implements a SIRD model applied to COVID-19 spreading.
 
 ## The model
 
-The following set of coupled ordinary differential equations represents the core of our modeling approach:
+The model simulates the amount in time of the following variables: number of susceptible people; the number of infected patients; the number of people that recovered from the disease; the number of patients who passed away. The following set of coupled ordinary differential equations describe the rate of change of the four variables:
 - ![alt text](https://latex.codecogs.com/gif.latex?%5Cdot%20S%20%3D%20-%5Cbeta%20%5Ccdot%20S%20%5Ccdot%20I "dS/dt = -beta*S*I")
 - ![alt text](https://latex.codecogs.com/gif.latex?%5Cdot%20I%20%3D%20%5Cbeta%20%5Ccdot%20S%20%5Ccdot%20I%20-%20%5Cgamma%20%5Ccdot%20I%20-%20%5Cdelta%20%5Ccdot%20I "dI/dt = beta*S*I - gamma*I - delta*I")
 - ![alt text](https://latex.codecogs.com/gif.latex?%5Cdot%20R%20%3D%20-%5Cgamma%20%5Ccdot%20I "dR/dt=delta*I")
